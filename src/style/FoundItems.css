@@ -1,0 +1,26 @@
+.FoundItems{
+    display: grid;
+    grid-template-columns: 250px 250px 250px 250px;
+    grid-template-rows: auto;
+    grid-gap: 12px;
+    justify-content: center;
+}
+/* *:nth-child(-n+2) */
+.FoundItems > *:first-child > .FoodItem{
+    border: 2px solid red;
+    color: red;
+}
+.FoundItems > *:first-child > .FoodItem:hover{
+    border: 2px solid red;
+    color: red;
+}
+
+.FoodItem.FoundItem{
+    border: 2px solid green;
+    color: green;
+}
+
+.FoodItem.FoundItem:hover{
+    border: 2px solid green;
+    color: green;
+}

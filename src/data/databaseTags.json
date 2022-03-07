@@ -1,0 +1,122 @@
+[
+    {
+        "id": 11,
+        "name": "african"
+    },
+    {
+        "id": 8,
+        "name": "american"
+    },
+    {
+        "id": 9,
+        "name": "asian"
+    },
+    {
+        "id": 22,
+        "name": "breakfast"
+    },
+    {
+        "id": 4,
+        "name": "cheese"
+    },
+    {
+        "id": 12,
+        "name": "chinese"
+    },
+    {
+        "id": 21,
+        "name": "dessert"
+    },
+    {
+        "id": 1,
+        "name": "drink"
+    },
+    {
+        "id": 2,
+        "name": "eat"
+    },
+    {
+        "id": 10,
+        "name": "european"
+    },
+    {
+        "id": 19,
+        "name": "fish"
+    },
+    {
+        "id": 6,
+        "name": "german"
+    },
+    {
+        "id": 15,
+        "name": "indian"
+    },
+    {
+        "id": 5,
+        "name": "italian"
+    },
+    {
+        "id": 13,
+        "name": "japanese"
+    },
+    {
+        "id": 18,
+        "name": "korean"
+    },
+    {
+        "id": 24,
+        "name": "main dish"
+    },
+    {
+        "id": 20,
+        "name": "meat"
+    },
+    {
+        "id": 17,
+        "name": "mexican"
+    },
+    {
+        "id": 27,
+        "name": "pasta"
+    },
+    {
+        "id": 25,
+        "name": "side dish"
+    },
+    {
+        "id": 26,
+        "name": "snack"
+    },
+    {
+        "id": 3,
+        "name": "soup"
+    },
+    {
+        "id": 23,
+        "name": "starter"
+    },
+    {
+        "id": 16,
+        "name": "tamil"
+    },
+    {
+        "id": 14,
+        "name": "thai"
+    },
+    {
+        "id": 7,
+        "name": "turkish"
+    },
+    {
+        "id": 29,
+        "name": "vegan"
+    },
+    {
+        "id": 28,
+        "name": "vegetarian"
+    },
+    {
+        "id": 30,
+        "name": "vietnamese"
+    }
+]

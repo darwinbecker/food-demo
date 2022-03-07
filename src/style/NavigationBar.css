@@ -1,0 +1,49 @@
+.NavBar {
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  padding: 0;
+  background-color: var(--primaryColor);
+  box-shadow: 0 2px 8px rgb(0 0 0 / 50%);
+}
+
+.NavBar li {
+  margin: 0 auto;
+  display: inline-block;
+  list-style: none;
+  padding: 0;
+  font-size: var(--headlineFont);
+}
+
+.hoverEffect{
+  padding: 20px 15px;
+}
+
+.hoverEffect > a {
+  position: relative;
+  margin: 20px;
+  text-transform: uppercase;
+  z-index: 1;
+  color: var(--fontColor);
+  cursor: pointer;
+  text-decoration: none;
+  transform-style: preserve-3d;
+}
+
+.hoverEffect > a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  bottom: 0;
+  margin: -5px 0;
+  background-color: black;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.2s ease-in-out 0s;
+}
+
+.hoverEffect > a:hover:before {
+  visibility: visible;
+  transform: scaleX(1);
+}

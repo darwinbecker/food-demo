@@ -1,0 +1,27 @@
+.pinnedTag svg{
+    cursor: pointer;
+}
+
+.pinnedTag svg:hover{
+    background-color: #b0c0d3;
+    border-radius: 4px;
+}
+
+.dropdownList {
+    margin: auto;
+}
+
+.inputWrapper{
+    margin: auto;
+}
+
+#tagInput{
+    font-family: var(--fontFamily);
+    font-size: 14px;
+}
+
+.filterTags{
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+}
