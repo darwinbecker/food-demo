@@ -1,5 +1,26 @@
+
+:root {
+    --fontSize: 1.1rem;
+}
 .Home{
     margin: auto;
     text-align: center;
     padding: 0px 0px 20px 0px;
+}
+
+.Home section{
+    display: inline-block;
+    font-size: var(--fontSize);
+}
+
+.Home section>p{
+    margin: auto;
+    margin-bottom: 10px;
+    width: 62ch;
+}
+
+.Home section>li{
+    margin: auto;
+    text-align: left;
+    width: 50ch;
 }
