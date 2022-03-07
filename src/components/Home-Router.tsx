@@ -46,7 +46,7 @@ export const FoodApp: React.FC = () => {
                 <ul className="NavBar">
                     <li>
                         <div className="hoverEffect">
-                            <Link to="/food-demo/home">Home</Link>
+                            <Link to="/food-demo">Home</Link>
                         </div>
                     </li>
                     <li>
@@ -62,8 +62,8 @@ export const FoodApp: React.FC = () => {
                 </ul>
 
                 <Routes>
-                    <Route path="*" element={<Navigate to="/food-demo/home" />} />
-                    <Route path="/food-demo/home" element={<Home />} />
+                    <Route path="*" element={<Navigate to="/food-demo" />} />
+                    <Route path="/food-demo" element={<Home />} />
                     <Route path="/food-demo/food" element={<FoodPage />} />
                     <Route path="/food-demo/diary" element={<DiaryPage />} />
                 </Routes>
