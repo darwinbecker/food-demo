@@ -1,6 +1,6 @@
 import React from 'react';
 import type { FoodItem, ImgItem } from '../../Interface';
-import FoodItemComponent from './FoodItemComponent';
+import FoodItemComponent from './FoodItem';
 import foodData from '../../data/databaseFood.json'
 import foodDataIcons from '../../data/databaseFoodIcons.json';
 import { ProviderContext, withSnackbar } from 'notistack';

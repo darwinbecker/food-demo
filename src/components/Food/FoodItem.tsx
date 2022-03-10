@@ -71,7 +71,7 @@ class FoodItemComponent extends React.Component<ProviderContext & FoodItemProps,
                     <span>{this.state.value}</span>
                     <button className='minusButton' onClick={this.handleMinus}>-</button>
                     <div className="addToList">
-                        <button className='addToListButton' onClick={this.handleAddToList} >Add To List</button>
+                        <button className='addToListButton' onClick={this.handleAddToList} >Add To Diary</button>
                     </div>
                 </div>
             </div>

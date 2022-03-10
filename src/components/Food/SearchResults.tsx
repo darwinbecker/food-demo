@@ -1,6 +1,6 @@
 import React from "react";
 import { FoodItem } from "../../Interface";
-import FoodItemComponent from "./FoodItemComponent";
+import FoodItemComponent from "./FoodItem";
 
 interface SearchbarProps {
     foodlistResult: FoodItem[]
