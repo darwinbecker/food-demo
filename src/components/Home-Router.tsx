@@ -34,6 +34,13 @@ export const Home: React.FC = () => {
                 <li>Keep track of all food items that the user has added before</li>
                 <li>Create a calendar to sort all diary entries by date</li>
                 <li>Edit and delete a diary entry</li>
+
+                <div className="githubLink">
+                    <a href="https://github.com/darwinbecker" target="_blank">
+                        <i className="bi bi-github"></i>
+                        <span>Darwin Becker</span>
+                    </a>
+                </div>
             </section>
         </div>
     );
