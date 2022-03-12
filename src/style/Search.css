@@ -1,3 +1,8 @@
+:root{
+    --searchFontSize: 1.5rem;
+    --searchFilterIconSize: 1.6rem;
+}
+
 /* Search */
 .Search, .SearchResults {
     margin: auto;
@@ -21,53 +26,76 @@
 } 
 
 .searchForm{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--primaryColor);
+    padding: 0.2rem;
+    border: 1px solid black;
+    border-radius: 0.3rem;
 }
 ::placeholder{
     color: darkgray;
 }
+
 .searchInput[type=text]{
+    font-size: var(--searchFontSize);
+    width: 100%;
+    padding: 0 0.5rem;
+    border: none;
+    outline: none;
     background-color: var(--primaryColor);
-    font-family: var(--fontFamily);
-    font-size: var(--fontSizeFoodHeader);
-    border: 1px solid darkgray;
-    padding-right: 50px;
-    border-radius: 5px;
-    padding-left: 10px;
+    border-right: 1px solid black;
+    border-left: 1px solid black;
 }
   
 .searchButton[type="submit"]{
-    background-color: var(--backgroundColor);
-    border: 1px solid darkgray;
-    margin-left: -40px;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
-    vertical-align: top;
-}
-.searchButton:hover{
-    transition: all 0.2s ease-in;
+    font-size: var(--searchFontSize);
+    margin: 0;
+    padding: 0 0.2rem;
+    border: none;
+    outline: none;
     background-color: var(--primaryColor);
-    border: 1px solid black;
-  }
-
-.searchButton .searchIcon{
-    width: 25px;
+    cursor: pointer;
+}
+.searchButton:active{
+    color: darkgray;
+}
+.searchButton svg{
+    width: var(--searchFilterIconSize);
+    /* vertical-align: middle; */
+    vertical-align: text-bottom;
 }
 
+.clearButton[type="reset"]{
+    font-size: var(--searchFontSize);
+    margin: 0;
+    padding: 0 0.2rem;
+    border: none;
+    outline: none;
+    background-color: var(--primaryColor);
+    cursor: pointer;
+}
+.clearButton:active{
+    color: rgb(187, 0, 0);
+}
+.clearButton svg{
+    width: var(--searchFilterIconSize);
+    /* vertical-align: middle; */
+    vertical-align: text-bottom;
+}
 
-
-/* foodlist */
+/* Filter */
 .foodlistButton{
-    display: inline-block;
-    background-color: var(--primaryColor);    
+    display: inline-block; 
+    font-size: var(--searchFontSize);
+    background-color: var(--primaryColor);
     border: var(--foodItemBorderHover);
-    border-radius: 5px;
+    border-radius: 0.25rem;
 }
   
-.foodlist{
-    display: inline-block;
-    margin: auto;
-}
-
 .foodlistIcon{
-    width: 26px;
+    width: var(--searchFilterIconSize);
+    /* vertical-align: middle; */
+    vertical-align: text-bottom;
 }

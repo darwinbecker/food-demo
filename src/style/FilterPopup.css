@@ -1,14 +1,14 @@
 .FilterPopup{
-    display: none;
-    margin: auto;
-    padding: 5px 0px 15px 0px;
-    text-align: center;
-    min-width: 400px;
-    width: 1000px;
-    max-height: 200px;
-    border: var(--foodItemBorder);
-    border-radius: 5px;
-    box-shadow: var(--boxShadow);
+  display: none;
+  margin: auto;
+  padding: 0.25rem 3.2rem 0.75rem 3.2rem;
+  text-align: center;
+  max-width: 800px;
+  max-height: 200px;
+  border: var(--foodItemBorder);
+  border-radius: 5px;
+  box-shadow: var(--boxShadow);
+  background-color: var(--primaryColor);
 }
 
 .FilterPopup button{

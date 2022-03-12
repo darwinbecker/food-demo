@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { FoodItem } from "../../Interface";
-import searchIcon from "../../static/search.svg"
+import SearchIcon from '@mui/icons-material/Search';
+import ClearIcon from '@mui/icons-material/Clear';
 
 interface SearchbarProps {
     foodlist: FoodItem[],
@@ -55,9 +56,15 @@ export const Searchbar: React.FC<SearchbarProps> = (props: SearchbarProps) => {
     return (
         <div className="searchChild searchbar">
             <form className="searchForm" onSubmit={handleSubmit}>
-                <input className="searchInput" type="text" placeholder="Search Item.." value={value} onChange={handleChange} />
                 <button className="searchButton" type="submit">
-                    <img className="searchIcon Icon" src={searchIcon} alt="search" />
+                    <SearchIcon></SearchIcon>
+                </button>
+                <input className="searchInput" type="text" placeholder="Search Item.." value={value} onChange={handleChange} />
+                <button className="clearButton" type="reset" onClick={() => {
+                    setValue("");
+                    props.setResults([]);
+                }}>
+                    <ClearIcon></ClearIcon>
                 </button>
             </form>
         </div>
