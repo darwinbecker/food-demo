@@ -3,7 +3,8 @@
   text-align: center;
   margin: 0 auto;
   padding: 0;
-  background-color: var(--primaryColor);
+  /* background-color: var(--primaryColor); */
+  background-color: #FFDD00;
   box-shadow: 0 2px 8px rgb(0 0 0 / 50%);
 }
 
@@ -24,7 +25,8 @@
   margin: 20px;
   text-transform: uppercase;
   z-index: 1;
-  color: var(--fontColor);
+  /* color: var(--fontColor); */
+  color: #0057B7;
   cursor: pointer;
   text-decoration: none;
   transform-style: preserve-3d;
@@ -37,7 +39,8 @@
   height: 3px;
   bottom: 0;
   margin: -5px 0;
-  background-color: black;
+  /* background-color: black; */
+  background-color: #0057B7;
   visibility: hidden;
   transform: scaleX(0);
   transition: all 0.2s ease-in-out 0s;
