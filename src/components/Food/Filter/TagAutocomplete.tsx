@@ -8,11 +8,15 @@ import { styled } from '@mui/material/styles';
 import { useEffect } from 'react';
 import { Tag as TagType } from '../../../Interface';
 
+// const Root = styled('div')(
+//   ({ theme }) => `
+//   color: ${theme.palette.mode === 'dark' ? 'rgba(255,255,255,0.65)' : 'rgba(0,0,0,.85)'};
+//   font-size: 14px;
+// `,
+// );
 
 const Root = styled('div')(
   ({ theme }) => `
-  color: ${theme.palette.mode === 'dark' ? 'rgba(255,255,255,0.65)' : 'rgba(0,0,0,.85)'
-    };
   font-size: 14px;
 `,
 );

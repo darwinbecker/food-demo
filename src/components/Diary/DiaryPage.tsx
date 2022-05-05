@@ -3,6 +3,7 @@ import type { FoodItem, ImgItem } from '../../Interface';
 import { ProviderContext, withSnackbar } from 'notistack';
 
 interface DiaryPageProps {
+    diary: FoodItem[],
 };
 interface DiaryPageState {
 };
@@ -15,6 +16,7 @@ class DiaryPage extends React.Component<ProviderContext & DiaryPageProps, DiaryP
 
         // http://localhost:8080/food
         this.state = {
+            diary: []
         };
     }
 
@@ -27,6 +29,15 @@ class DiaryPage extends React.Component<ProviderContext & DiaryPageProps, DiaryP
         this._isMounted = false;
     }
 
+    renderItem = (item: FoodItem, index: number) => {
+        return (
+            <div key={index}>
+                <img src={item.img} alt={item.name + '.svg'} className="FoodIcon" width={50} />
+                <span style={{ 'marginRight': '5px' }}>{item.amount + item.amountType}</span>
+                <div style={{ 'display': 'inline' }}>{item.name}</div>
+            </div>
+        )
+    }
 
     render() {
         return (
@@ -36,6 +47,13 @@ class DiaryPage extends React.Component<ProviderContext & DiaryPageProps, DiaryP
                     <p>coming soon :)</p>
                     <p>display added food-items here on this page</p>
                 </div>
+                {this.props.diary.length > 0 && (
+                    <div>
+                        {this.props.diary.map((item, index) => {
+                            return this.renderItem(item, index);
+                        })}
+                    </div>
+                )}
             </div>
         )
     }

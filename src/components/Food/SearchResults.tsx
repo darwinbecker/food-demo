@@ -4,6 +4,7 @@ import FoodItemComponent from "./FoodItem";
 
 interface SearchbarProps {
     foodlistResult: FoodItem[]
+    addToDiary: (foodItem: FoodItem, amount: number) => void,
 };
 
 export const SearchResults: React.FC<SearchbarProps> = (props: SearchbarProps) => {
@@ -15,7 +16,7 @@ export const SearchResults: React.FC<SearchbarProps> = (props: SearchbarProps) =
                         <h2>Found Items</h2>
                         <div className="FoundItems" >
                             {props.foodlistResult.map((foundItem: FoodItem) =>
-                                <FoodItemComponent data={foundItem} key={foundItem.id} className="FoundItem" />
+                                <FoodItemComponent data={foundItem} key={foundItem.id} addToDiary={props.addToDiary} className="FoundItem" />
                             )}
                         </div>
                     </div>

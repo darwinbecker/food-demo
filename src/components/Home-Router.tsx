@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
     BrowserRouter,
     Routes,
@@ -8,6 +8,7 @@ import {
 } from "react-router-dom";
 import FoodPage from './Food/FoodPage';
 import DiaryPage from './Diary/DiaryPage';
+import { FoodItem } from "../Interface";
 
 export const Home: React.FC = () => {
     return (
@@ -46,7 +47,30 @@ export const Home: React.FC = () => {
     );
 }
 
+// interface FoodAppState {
+//     diary: FoodItem[],
+// };
+
 export const FoodApp: React.FC = () => {
+
+    const [diary, setDiary] = useState<FoodItem[]>([]);
+
+    const addToDiary = (foodItem: FoodItem, amount: number) => {
+        console.log("setting diary");
+        const newItem: FoodItem = {
+            id: foodItem.id,
+            img: foodItem.img,
+            name: foodItem.name,
+            kcal: foodItem.kcal * amount,
+            protein: foodItem.protein * amount,
+            carbs: foodItem.carbs * amount,
+            fat: foodItem.fat * amount,
+            amount: foodItem.amount * amount,
+            amountType: foodItem.amountType
+        }
+        setDiary([...diary, newItem]);
+    }
+
     return (
         <BrowserRouter>
             <div className="App-content">
@@ -71,8 +95,8 @@ export const FoodApp: React.FC = () => {
                 <Routes>
                     <Route path="*" element={<Navigate to="/food-demo" />} />
                     <Route path="/food-demo" element={<Home />} />
-                    <Route path="/food-demo/food" element={<FoodPage />} />
-                    <Route path="/food-demo/diary" element={<DiaryPage />} />
+                    <Route path="/food-demo/food" element={<FoodPage addToDiary={addToDiary} />} />
+                    <Route path="/food-demo/diary" element={<DiaryPage diary={diary} />} />
                 </Routes>
             </div>
         </BrowserRouter>

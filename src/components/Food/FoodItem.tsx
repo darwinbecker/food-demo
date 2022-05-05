@@ -4,6 +4,7 @@ import { ProviderContext, withSnackbar } from 'notistack';
 
 interface FoodItemProps {
     data: FoodItem,
+    addToDiary: (foodItem: FoodItem, amount: number) => void,
     className?: string
 };
 interface FoodItemState {
@@ -41,6 +42,7 @@ class FoodItemComponent extends React.Component<ProviderContext & FoodItemProps,
     handleAddToList() {
         const message = "added " + this.state.value + "x " + this.props.data.name + " to your food diary.";
         const img = <span><img src={this.props.data.img} alt={this.props.data.name + '.svg'} className="FoodIcon" width={30} />{message}</span>;
+        this.props.addToDiary(this.props.data, this.state.value);
         this.props.enqueueSnackbar(img, { variant: 'info' });
     }
 

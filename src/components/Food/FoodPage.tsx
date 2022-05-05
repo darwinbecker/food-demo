@@ -9,8 +9,10 @@ import { fetchFoodData, fetchFoodItemImg } from '../../fetch/FetchData';
 import { SearchResults } from "./SearchResults";
 import { FilterPopup } from "./Filter/FilterPopup";
 import filterIcon from "../../static/filter.svg";
+import DiaryPage from '../Diary/DiaryPage';
 
 interface FoodPageProps {
+    addToDiary: (foodItem: FoodItem, amount: number) => void,
 };
 interface FoodPageState {
     foodlist: FoodItem[],
@@ -96,7 +98,7 @@ class FoodPage extends React.Component<ProviderContext & FoodPageProps, FoodPage
         return (
             <>
                 {this.state.foodlist.map((data: FoodItem) => (
-                    <FoodItemComponent key={data.id} data={data} />
+                    <FoodItemComponent key={data.id} data={data} addToDiary={this.props.addToDiary} />
                 ))}
             </>
         );
@@ -120,7 +122,7 @@ class FoodPage extends React.Component<ProviderContext & FoodPageProps, FoodPage
                 <FilterPopup setSearchresults={this.setSearchresults} serverOnline={this.state.serverOnline} />
                 <div className="SearchResults">
                     {this.state.searchResults.length > 0 ?
-                        <SearchResults foodlistResult={this.state.searchResults} />
+                        <SearchResults foodlistResult={this.state.searchResults} addToDiary={this.props.addToDiary} />
                         :
                         <></>
                     }
