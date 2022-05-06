@@ -31,29 +31,41 @@ class DiaryPage extends React.Component<ProviderContext & DiaryPageProps, DiaryP
 
     renderItem = (item: FoodItem, index: number) => {
         return (
-            <div key={index}>
-                <img src={item.img} alt={item.name + '.svg'} className="FoodIcon" width={50} />
-                <span style={{ 'marginRight': '5px' }}>{item.amount + item.amountType}</span>
-                <div style={{ 'display': 'inline' }}>{item.name}</div>
-            </div>
+            <li key={index} className="DiaryItem">
+                <div className='mainInfo'>
+                    <img src={item.img} alt={item.name + '.svg'} className="FoodIcon" width={50} />
+                    <span className='amount'>{item.amount + item.amountType}</span>
+                    <div className='title'>{item.name}</div>
+                    <div className='kcal'>{item.kcal}kcal</div>
+                </div>
+
+                <div className="nutritionList">
+                    <div className='protein'>P: {item.protein.toFixed(1)}</div>
+                    <div className='carbs'>C: {item.carbs.toFixed(1)}</div>
+                    <div className='fat'>F: {item.fat.toFixed(1)}</div>
+                </div>
+            </li>
         )
     }
 
     render() {
         return (
             <div className="Content">
-                <div className="Diary">
+                {/* <div className="Diary">
                     <h2>Diary</h2>
                     <p>coming soon :)</p>
                     <p>display added food-items here on this page</p>
+                </div> */}
+
+                <div className="Diary">
+                    {this.props.diary.length > 0 && (
+                        <ul className='DiaryList'>
+                            {this.props.diary.map((item, index) => {
+                                return this.renderItem(item, index);
+                            })}
+                        </ul>
+                    )}
                 </div>
-                {this.props.diary.length > 0 && (
-                    <div>
-                        {this.props.diary.map((item, index) => {
-                            return this.renderItem(item, index);
-                        })}
-                    </div>
-                )}
             </div>
         )
     }

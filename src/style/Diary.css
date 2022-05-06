@@ -1,5 +1,57 @@
-.Diary{
+.Diary {
     margin: auto;
     text-align: center;
     padding: 0px 0px 20px 0px;
 }
+
+.DiaryList {
+    list-style: none;
+}
+
+.DiaryItem {
+    margin: 10px auto;
+    padding: 10px 0;
+    max-width: 400px;
+    transition: 0.05s ease-in;
+    transform: scale(1);
+    border: var(--foodItemBorder);
+    border-radius: 10px;
+    box-shadow: var(--boxShadow);
+    background-color: var(--primaryColor);
+    /* transition: transform 1s; */
+    transform-origin: 50% 50%;
+}
+
+.DiaryItem:hover {
+    transition: 0.15s ease-out;
+    transform: scale(1.02);
+    border: var(--foodItemBorderHover);
+    box-shadow: var(--boxShadowHover);
+}
+
+.DiaryItem>.mainInfo {
+    font-size: 1.2rem;
+}
+
+.DiaryItem>.mainInfo>img {
+    width: 50px;
+}
+
+.DiaryItem>.mainInfo>.amount {
+    margin-right: 5px;
+}
+
+.DiaryItem>.mainInfo>.title,
+.kcal {
+    margin-right: 5px;
+    display: inline-block;
+}
+
+.DiaryItem>.nutritionList {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    align-content: center;
+    font-size: 1.05rem;
+}
+

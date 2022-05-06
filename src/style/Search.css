@@ -6,7 +6,6 @@
 /* Search */
 .Search, .SearchResults {
     margin: auto;
-    margin-top: 20px;
     text-align: center;
     padding: 0px 0px 20px 0px;
     font-family: var(--fontFamily);
